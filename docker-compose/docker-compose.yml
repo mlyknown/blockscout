@@ -11,10 +11,10 @@ services:
       file: ./services/db.yml
       service: db-init
 
-  db:
+  db1:
     extends:
       file: ./services/db.yml
-      service: db
+      service: db1
 
   backend:
     depends_on:
