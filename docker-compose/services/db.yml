@@ -4,12 +4,12 @@ services:
   db-init:
     image: postgres:15
     volumes:
-      - ./blockscout-db-data:/var/lib/postgresql/data
+      - ./blockscout-db-data:/var/lib/postgresql/data1
     entrypoint:
       - sh
       - -c
       - |
-        chown -R 2000:2000 /var/lib/postgresql/data
+        chown -R 2000:2000 /var/lib/postgresql/data1
 
   db:
     depends_on:
@@ -24,12 +24,12 @@ services:
     environment:
         POSTGRES_DB: 'blockscout'
         POSTGRES_USER: 'blockscout'
-        POSTGRES_PASSWORD: 'ceWb1MeLBEeOIfk65gU8EjF8'
+        POSTGRES_PASSWORD: 'ceWb1MeLBEeOIfk65gU8EjF81'
     ports:
-      - target: 5432
+      - target: 5433
         published: 7432
     volumes:
-      - ./blockscout-db-data:/var/lib/postgresql/data
+      - ./blockscout-db-data:/var/lib/postgresql/data1
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U blockscout -d blockscout"]
       interval: 10s
