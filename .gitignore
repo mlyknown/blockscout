@@ -49,6 +49,7 @@ dump.rdb
 /apps/block_scout_web/priv/cert
 
 /docker-compose/services/blockscout-db-data
+/docker-compose/services/blockscout-db-data1
 /docker-compose/services/stats-db-data
 /docker-compose/services/redis-data
 /docker-compose/services/logs
