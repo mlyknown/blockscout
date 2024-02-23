@@ -43,15 +43,15 @@ services:
         ETHEREUM_JSONRPC_WS_URL: ws://host.docker.internal:8545/
         CHAIN_ID: '1337'
 
-  visualizer:
-    extends:
-      file: ./services/visualizer.yml
-      service: visualizer
+  # visualizer:
+  #   extends:
+  #     file: ./services/visualizer.yml
+  #     service: visualizer
 
-  sig-provider:
-    extends:
-      file: ./services/sig-provider.yml
-      service: sig-provider
+  # sig-provider:
+  #   extends:
+  #     file: ./services/sig-provider.yml
+  #     service: sig-provider
 
   frontend:
     depends_on:
@@ -60,24 +60,24 @@ services:
       file: ./services/frontend.yml
       service: frontend
 
-  stats-db-init:
-    extends:
-      file: ./services/stats.yml
-      service: stats-db-init
+  # stats-db-init:
+  #   extends:
+  #     file: ./services/stats.yml
+  #     service: stats-db-init
 
-  stats-db:
-    depends_on:
-      - backend
-    extends:
-      file: ./services/stats.yml
-      service: stats-db
+  # stats-db:
+  #   depends_on:
+  #     - backend
+  #   extends:
+  #     file: ./services/stats.yml
+  #     service: stats-db
 
-  stats:
-    depends_on:
-      - stats-db
-    extends:
-      file: ./services/stats.yml
-      service: stats
+  # stats:
+  #   depends_on:
+  #     - stats-db
+  #   extends:
+  #     file: ./services/stats.yml
+  #     service: stats
 
   proxy:
     depends_on:
