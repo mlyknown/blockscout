@@ -83,7 +83,7 @@ services:
     depends_on:
       - backend
       - frontend
-      - stats
+      # - stats
     extends:
       file: ./services/nginx.yml
       service: proxy
