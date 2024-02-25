@@ -50,7 +50,7 @@ services:
     env_file:
       -  ../envs/common-stats.env
     environment:
-      - STATS__DB_URL=postgres://stats:n0uejXPl61ci6ldCuE2gQU5Y1@stats-db:5433/stats
-      - STATS__BLOCKSCOUT_DB_URL=${STATS__BLOCKSCOUT_DB_URL:-postgresql://blockscout:ceWb1MeLBEeOIfk65gU8EjF81@db:5433/blockscout}
+      - STATS__DB_URL=postgres://stats:n0uejXPl61ci6ldCuE2gQU5Y1@stats-db:7433/stats
+      - STATS__BLOCKSCOUT_DB_URL=${STATS__BLOCKSCOUT_DB_URL:-postgresql://blockscout:ceWb1MeLBEeOIfk65gU8EjF81@db:7433/blockscout}
       - STATS__CREATE_DATABASE=true
       - STATS__RUN_MIGRATIONS=true
