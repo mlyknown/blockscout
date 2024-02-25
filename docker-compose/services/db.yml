@@ -30,7 +30,7 @@ services:
       - target: 5432
         published: 7433
     volumes:
-      - ./blockscout-db-data:/var/lib/postgresql1/data1
+      - ./blockscout-db-data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U blockscout -d blockscout"]
       interval: 10s
